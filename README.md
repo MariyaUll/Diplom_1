@@ -28,6 +28,8 @@ Diplom_1/
 │   ├── test_burger.py                  # Юнит-тесты для класса Burger
 │   ├── test_ingredient.py              # Юнит-тесты для класса Ingredient
 │   └── test_database.py                # Юнит-тесты для класса Database
+├── conftest.py                         # Фикстуры
+├── constants.py                        # Константы 
 ├── pyproject.toml                      # Конфигурация проекта: настройки coverage (включая omit для praktikum.py)
 ├── requirements.txt                    # Зависимости проекта
 └── README.md                           
