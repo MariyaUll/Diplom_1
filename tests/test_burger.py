@@ -104,6 +104,11 @@ class TestBurger:
 
         # Ингредиенты
         for ing_data in case["ingredients"]:
-            m = Mock()
-            m.get_type.return_value = ing_data["type"]
-            m.get_name.return_value
+            mock_ing = Mock()
+            mock_ing.get_type.return_value = ing_data["type"]
+            mock_ing.get_name.return_value = ing_data["name"]
+            mock_ing.get_price.return_value = ing_data["price"]
+            burger_base.add_ingredient(mock_ing)
+
+        receipt = burger_base.get_receipt()
+        assert receipt == case["expected_receipt"]
